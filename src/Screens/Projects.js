@@ -82,7 +82,7 @@ function MyProjects() {
               8+
             </h6>
             <hr className="w-25 mx-auto"></hr>
-            <h5 className="text-center">EFFECTS</h5>
+            <h5 className="text-center">Techs Used</h5>
             <hr className="w-25 mx-auto"></hr>
           </div>
         </div>

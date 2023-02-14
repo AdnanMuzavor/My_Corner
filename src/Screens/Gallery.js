@@ -80,7 +80,7 @@ function Gallery(props) {
     <Loading />
   ) : load ? (
     <Loading />
-  ) : (
+  ) : Gallery.length!==0? (
     <>
       <section className="my-4 ">
         <div className="text-center">
@@ -101,6 +101,6 @@ function Gallery(props) {
         {/* <GalleryImgRender GalleryImages={items} limit={items.length} /> */}
       </section>
     </>
-  );
+  ):"no";
 }
 export default Gallery;

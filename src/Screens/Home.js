@@ -32,7 +32,7 @@ const Home = () => {
       <MyProjects />
       {/* <Services/> */}
       <Experience />
-      <Gallery home={true} />
+      {/* <Gallery home={true} /> */}
       <Contact />
       {/* <Carousel /> */}
     </>

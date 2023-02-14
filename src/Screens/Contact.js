@@ -1,7 +1,6 @@
-
 import React from "react";
 import { useState } from "react";
-
+import emailjs from "emailjs-com";
 import { useDispatch } from "react-redux";
 import { postmessage } from "../Actions/Messageaction";
 import Media from "../Components/Mediaicons";
@@ -32,8 +31,29 @@ function Contact() {
     if (details.name === "" || details.message === "" || details.email === "") {
       alert("Please fill in all the details dear");
     } else {
-      dispatch(postmessage(details));
-
+      //  dispatch(postmessage(details));
+      emailjs
+        .send(
+          "service_qpzk5j4",
+          "template_cz1lm5m",
+          {
+            name: details.name,
+            message: details.message,
+            email: details.email,
+          },
+          "FAjnQEPvIbEGIcXpA"
+        )
+        .then((res) => {
+          console.log(res);
+          alert(`Hey ${details.name}, thanks for your response.`);
+        })
+        .catch((e) => {
+          console.log(e);
+          alert(
+            `Oops, sorry ${details.name}, could not send your message to Adnan. Please try later`
+          );
+          return;
+        });
       setdetails((oldval) => {
         return {
           ...oldval,
@@ -92,7 +112,7 @@ function Contact() {
                     message
                   </label>
                   <textarea
-                    class="form-control"
+                    className="txtarea form-control"
                     id="exampleFormControlTextarea1"
                     rows="3"
                     placeholder="Your Message"

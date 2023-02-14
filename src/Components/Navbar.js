@@ -73,7 +73,7 @@ function Navbar() {
                   Experience
                 </NavLink>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <NavLink
                   className="nav-link"
                   to="/gallery"
@@ -82,8 +82,8 @@ function Navbar() {
                 >
                   Gallery{" "}
                 </NavLink>
-              </li>
-              <li className="nav-item">
+              </li> */}
+              {/* <li className="nav-item">
                 <NavLink
                   className="nav-link"
                   to="/admin"
@@ -92,7 +92,7 @@ function Navbar() {
                 >
                   Is It Adnan?{" "}
                 </NavLink>
-              </li>
+              </li> */}
               {/* <li className="nav-item">
                       <NavLink className="nav-link" to="/services"  exact activeClassName="menu_active">
                        Services                                                    </NavLink>

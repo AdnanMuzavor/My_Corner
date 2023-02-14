@@ -32,31 +32,43 @@ export const GetData = (datatype) => async (dispatch) => {
       dispatch({ type: GET_EXPERIENCE_REQUEST });
     }
 
-    const getdata = await fetch("/api/mydata", {
-      method: "GET",
-      headers: {
-        "Content-type": "application/json",
-      },
-    });
+    //________________________________________________
+    //_________WHEN BACKEND EXISTED___________________
+    //________________________________________________
+
+    // const getdata = await fetch("/api/mydata", {
+    //   method: "GET",
+    //   headers: {
+    //     "Content-type": "application/json",
+    //   },
+    // });
 
     //After getting data call reducer with help of type as per request
-    const data = await getdata.json();
-    if (datatype === "skills" && data) {
-      const skills = data.filter((e) => e.category === "skill");
-      console.log(skills);
-      dispatch({ type: GET_SKILLS_SUCCESS, payload: skills });
-    } else if (datatype === "projects" && data) {
-      const projects = data.filter((e) => e.category === "project");
-      console.log(projects);
-      dispatch({ type: GET_PROJECTS_SUCCESS, payload: projects });
+    //const data = await getdata.json();
+
+    //________________________________________________
+    //_________WHEN BACKEND EXISTED___________________
+    //________________________________________________
+
+    if (datatype === "skills") {
+      // const skills = data.filter((e) => e.category === "skill");
+      // console.log(skills);
+
+      dispatch({ type: GET_SKILLS_SUCCESS, payload: "" });
+    } else if (datatype === "projects") {
+      // const projects = data.filter((e) => e.category === "project");
+      // console.log(projects);
+
+      dispatch({ type: GET_PROJECTS_SUCCESS, payload: "" });
     } else if (datatype === "gallery") {
-      const gallerydata = data.filter((e) => e.category === "gallery");
-      console.log(gallerydata);
-      dispatch({ type: GET_GALLERY_SUCCESS, payload: gallerydata });
+      // const gallerydata = data.filter((e) => e.category === "gallery");
+      // console.log(gallerydata);
+
+      dispatch({ type: GET_GALLERY_SUCCESS, payload: "" });
     } else if (datatype === "experiences") {
-      const experiencedata = data.filter((e) => e.category === "experience");
-      console.log(experiencedata);
-      dispatch({ type: GET_EXPERIENCE_SUCCESS, payload: experiencedata });
+      // const experiencedata = data.filter((e) => e.category === "experience");
+      // console.log(experiencedata);
+      dispatch({ type: GET_EXPERIENCE_SUCCESS, payload: "" });
     }
   } catch (e) {
     console.log(e);

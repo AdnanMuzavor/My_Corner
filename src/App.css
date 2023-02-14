@@ -22,7 +22,8 @@ html {
 }
 .navbar {
   background-color: #fff;
-  position: sticky;
+  position: sticky !important;
+  /* top:0; */
   /* margin-bottom: 12rem !important; */
  
 }
@@ -142,7 +143,9 @@ span {
 .text {
   margin-top: 1%;
 }
-
+.txtarea{
+  color: #000000 !important;
+}
 .top {
   margin-top: 6rem;
 }
@@ -211,7 +214,7 @@ span {
 }
 .card-text {
   color: black !important;
-  height: 4rem;
+  height: 6rem !important;
   overflow-y: scroll;
 }
 .card {

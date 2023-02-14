@@ -32,6 +32,7 @@ function Card(props) {
                   className={`card-btn btn btn-primary ${
                     window.innerWidth > 360 ? " anima" : ""
                   }`}
+                  target="_blank" 
                 >
                   {props.btn}
                 </a>
